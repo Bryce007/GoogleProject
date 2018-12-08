@@ -31,6 +31,7 @@ public class GoogleTest {
 	String PageTitle=driver.getTitle();
 	System.out.println("Page title is "+PageTitle);
 	Assert.assertEquals(PageTitle, "Google");
+	System.out.println("chnages");
 }
 	
 	@AfterMethod
