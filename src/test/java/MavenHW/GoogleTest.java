@@ -16,10 +16,10 @@ public class GoogleTest {
 	
 	@BeforeMethod
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "/Users/Bryce/eclipse-workspace/HomePage/Drivers/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver");
 		
 		driver= new ChromeDriver();
-		String url="https//www.google.com/search?q=google&oq=goo&aqs=chrome.1.69i57j0l5.4562j0j4&sourceid=chrome&ie=UTF-8";
+		String url="https://www.google.com/?gws_rd=ssl";
 		driver.get(url);
 		
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -30,7 +30,7 @@ public class GoogleTest {
 	public void Page() {
 	String PageTitle=driver.getTitle();
 	System.out.println("Page title is "+PageTitle);
-	Assert.assertEquals(PageTitle, "Google Search");
+	Assert.assertEquals(PageTitle, "Google");
 }
 	
 	@AfterMethod
